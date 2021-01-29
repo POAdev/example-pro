@@ -1,0 +1,18 @@
+{
+  "title": "workshop maybe Ideals",
+  "homeTown": "Port Harcourt, Nigeria",
+  "ideals":[
+    {"id": 1,
+      "text": "Talk to local business"
+    },
+    {"id": 2,
+      "text": "Foster teams of builders"
+    },
+    {"id": 3,
+      "text": "Talk to Ed Augustus"
+    },
+    {"id": 4,
+      "text": "Inquire about the vote building"
+    }
+  ]
+}
