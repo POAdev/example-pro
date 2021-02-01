@@ -5,18 +5,24 @@ import Axios from "axios"
 
 function MetaDataCall() {
 
-  const [someData, setSomeDate] = useState("");
+  const [someData, setSomeDate] = useState([]);
+  const [loading, isLOading] = useState(true);
 
   useEffect(()=> {
-    Axios.get("https://postgrest-api.mainnet.dandelion.link/tx_metadata?id=eq.2806").then(data => {
-      console.log(data.data[0].json)
-      setSomeDate(data.data[0].json);
+    Axios.get("https://postgrest-api.mainnet.dandelion.link/rpc/get_metadatum").then(data => {
+      console.log(data.data[0].metadatum)
+      setSomeDate(data.data);
+      setTimeout(() => {
+        isLOading(false)
+      }, 500);
     })
   });
 
   return (
     <div>
-      <h1 style={{color: "green"}}>{someData}</h1>
+      <h1 className="row p-0 m-0 justify-content-around align-items-center" style={{width: "100%", height: "70vh"}} key={someData.metadatum}>{loading ? "Loading" : someData.map(e => 
+      <p className="col-3 mr-1 pt-1 p-0" style={{color: "white", background: "blue", textAlign: "center", minHeight: "30vh"}}>Key: {e.metadatum}</p>)}
+      </h1>
     </div>
   );
 }

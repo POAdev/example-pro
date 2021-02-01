@@ -6,7 +6,7 @@ function IdeasList() {
   return (
     <div>
       <div >
-          {Ideas.ideals.map( e => <p key={e.idV}>
+          {Ideas.ideals.map( e => <p key={e.id}>
             {e.text}
           </p>)}
       </div>

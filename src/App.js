@@ -5,7 +5,7 @@ import MetaDataCall from "./MetaDataCall";
 function App() {
 
   return (
-    <div>
+    <div style={{padding: "10px 0 0 20px"}}>
         <SiteTitle/>
         <IdeasList />
         <MetaDataCall />
