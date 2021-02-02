@@ -3,9 +3,9 @@ import  Ideas from "./data/ideas.json"
 
 function SiteTitle() {
   return (
-    <div>
+    <div style={{marginBottom: "10px", marginTop: "10px"}}>
       <h1>{Ideas.title}</h1>
-      <p>{Ideas.homeTown}</p>
+      <h3>{Ideas.homeTown}</h3>
     </div>
   );
 }
